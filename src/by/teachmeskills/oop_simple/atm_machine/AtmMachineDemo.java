@@ -1,4 +1,4 @@
-package by.teachmeskills.opp_simple.atm_machine;
+package by.teachmeskills.oop_simple.atm_machine;
 /*
     Создать класс, описывающий банкомат.
     Набор купюр, находящихся в банкомате, должен задаваться тремя свойствами:

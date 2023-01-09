@@ -1,4 +1,4 @@
-package by.teachmeskills.opp_simple.atm_machine;
+package by.teachmeskills.oop_simple.atm_machine;
 
 public class AtmMachine {
     private int nominalATM20;
