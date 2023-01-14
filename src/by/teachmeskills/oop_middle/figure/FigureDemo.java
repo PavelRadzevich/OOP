@@ -23,8 +23,8 @@ public class FigureDemo {
                 new Rectangle(SIDE_C, SIDE_A)
         };
 
-        System.out.println("The sum of the perimeters of the figures in the array \n\n" + Arrays.toString(figures) +
-                "\n\n is:\n\n" + getSumPerimeterFigures(figures));
+        System.out.printf("The sum of the perimeters of the figures in the array \n\t" + Arrays.toString(figures) +
+                "\n is:\n\t" + (String.format("%.2f", getSumPerimeterFigures(figures))));
     }
 
     private static double getSumPerimeterFigures(Figure[] figures) {
@@ -34,6 +34,4 @@ public class FigureDemo {
         }
         return sum;
     }
-
-
 }
