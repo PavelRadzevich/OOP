@@ -10,6 +10,11 @@ public class Worker extends Person implements Employees {
 
     @Override
     public void printEmployeePosition() {
+        System.out.println("Job title of " + this.getName() + " is: " + this.position.name());
+    }
 
+    @Override
+    public String toString() {
+        return "{" + position + "; " + getName() + '}';
     }
 }

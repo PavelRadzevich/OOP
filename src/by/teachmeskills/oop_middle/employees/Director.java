@@ -1,6 +1,6 @@
 package by.teachmeskills.oop_middle.employees;
 
-public class Director extends Person implements Employees{
+public class Director extends Person implements Employees {
     private final Positions position;
 
     public Director(String name) {
@@ -10,6 +10,11 @@ public class Director extends Person implements Employees{
 
     @Override
     public void printEmployeePosition() {
+        System.out.println("Job title of " + this.getName() + " is: " + position.name());
+    }
 
+    @Override
+    public String toString() {
+        return "{" + position + "; " + getName() + '}';
     }
 }
