@@ -9,7 +9,14 @@ public class Invoice extends Document {
     public Invoice() {
     }
 
-    public Invoice(String numberDocument, Date dateDocument) {
+    public Invoice(String numberDocument, Date dateDocument, double monthlyTotal, int departmentCode) {
         super(numberDocument, dateDocument);
+        this.monthlyTotal = monthlyTotal;
+        this.departmentCode = departmentCode;
+    }
+
+    @Override
+    public String getInfo() {
+        return "Invoice: " + getNumberDocument() + " Date: " + getDateDocument() + " Monthly Total: " + monthlyTotal + " Department: " + departmentCode;
     }
 }

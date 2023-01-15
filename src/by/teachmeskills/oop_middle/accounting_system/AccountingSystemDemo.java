@@ -25,7 +25,9 @@ package by.teachmeskills.oop_middle.accounting_system;
         - Массив для класса регистра должен быть размером 10;
         - Для полей "Дата документа" следует использовать тип данных Date;
         - В методе предоставления информации о документе следует выводить на экран
-        информацию о переданном входным параметром документе;
+        информацию о переданном входным параметр документе;
+        - В методе предоставления информации о документе следует выводить на экран
+        информацию о документе по переданному входному параметру документа;
         - Каждый класс для описания документов должен содержать конструктор с
         параметрами и без;
         - Для имитации работы системы создайте класс Main, который будет содержать
@@ -36,13 +38,28 @@ package by.teachmeskills.oop_middle.accounting_system;
         классов.
 */
 
-import java.time.chrono.ChronoLocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 public class AccountingSystemDemo {
     public static void main(String[] args) {
-        ContractOfGoods cg = new ContractOfGoods("A356",new Date(), 50L, "Books" );
-        //Date data = new ChronoLocalDate();
-        //EmploymentContract ec = new EmploymentContract("C457",new Date(),new Date());
+        Calendar calendar = Calendar.getInstance();
+        Date today = calendar.getTime();
+
+        calendar.add(Calendar.YEAR, 1);
+        Date nextYear = calendar.getTime();
+
+        Document cGoods = new ContractOfGoods("16", today, 100, "Books");
+        Document invoice = new Invoice("3456", today, 60000, 555);
+        Document cEmployment = new EmploymentContract("324653", today, nextYear, "Eric Cartman");
+
+        TheDocumentRegister register = new TheDocumentRegister();
+        register.saveDocument(cEmployment);
+        register.saveDocument(invoice);
+        register.saveDocument(cGoods);
+
+        register.getDocument(cEmployment.getNumberDocument());
+        register.getDocument(invoice.getNumberDocument());
+        register.getDocument(cGoods.getNumberDocument());
     }
 }
