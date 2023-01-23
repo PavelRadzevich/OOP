@@ -13,6 +13,9 @@ package by.teachmeskills.exceptions.logon_manager;
     - Метод возвращает true, если значения верны или false в другом случае.
  */
 
+import by.teachmeskills.exceptions.logon_manager.exception.WrongLoginException;
+import by.teachmeskills.exceptions.logon_manager.exception.WrongPasswordException;
+
 import java.util.Scanner;
 
 import static by.teachmeskills.exceptions.logon_manager.LogonManager.getLogin;

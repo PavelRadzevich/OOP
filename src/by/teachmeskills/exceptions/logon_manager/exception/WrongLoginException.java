@@ -1,4 +1,4 @@
-package by.teachmeskills.exceptions.logon_manager;
+package by.teachmeskills.exceptions.logon_manager.exception;
 
 public class WrongLoginException extends Exception {
     private String login;

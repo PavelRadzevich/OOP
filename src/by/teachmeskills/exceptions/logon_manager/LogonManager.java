@@ -1,5 +1,8 @@
 package by.teachmeskills.exceptions.logon_manager;
 
+import by.teachmeskills.exceptions.logon_manager.exception.WrongLoginException;
+import by.teachmeskills.exceptions.logon_manager.exception.WrongPasswordException;
+
 import java.util.regex.Pattern;
 
 public final class LogonManager {

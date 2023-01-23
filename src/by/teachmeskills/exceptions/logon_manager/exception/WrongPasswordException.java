@@ -1,4 +1,4 @@
-package by.teachmeskills.exceptions.logon_manager;
+package by.teachmeskills.exceptions.logon_manager.exception;
 
 public class WrongPasswordException extends Exception {
     private String password;
