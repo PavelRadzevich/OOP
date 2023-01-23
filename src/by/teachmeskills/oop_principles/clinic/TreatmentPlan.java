@@ -1,17 +1,17 @@
 package by.teachmeskills.oop_principles.clinic;
 
 public class TreatmentPlan {
-    private byte TreatmentPlanCod;
+    private byte treatmentPlanCod;
 
     public TreatmentPlan() {
     }
 
     public byte getTreatmentPlanCod() {
-        return TreatmentPlanCod;
+        return treatmentPlanCod;
     }
 
     public void setTreatmentPlanCod(byte treatmentPlanCod) {
-        TreatmentPlanCod = treatmentPlanCod;
+        this.treatmentPlanCod = treatmentPlanCod;
         System.out.println("The treatment plan is assigned");
     }
 }

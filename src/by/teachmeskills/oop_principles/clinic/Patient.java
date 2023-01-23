@@ -7,13 +7,13 @@ public class Patient {
         this.treatmentPlan = new TreatmentPlan();
     }
 
-    public Patient(byte Code) {
+    public Patient(byte code) {
         this.treatmentPlan = new TreatmentPlan();
-        this.treatmentPlan.setTreatmentPlanCod(Code);
+        this.treatmentPlan.setTreatmentPlanCod(code);
     }
 
-    public void setTreatmentPlan(byte Cod) {
-        this.treatmentPlan.setTreatmentPlanCod(Cod);
+    public void setTreatmentPlan(byte cod) {
+        this.treatmentPlan.setTreatmentPlanCod(cod);
     }
 
     public void appointDoctor() {
