@@ -7,11 +7,11 @@ public final class DocumentProcessing {
     public static String get4digit(String string) {
         Pattern pattern = Pattern.compile("\\d{4}");
         Matcher mat = pattern.matcher(string);
-        String result = "";
+        StringBuilder result = new StringBuilder();
         while (mat.find()) {
-            result += mat.group() + " ";
+            result.append(mat.group()).append(" ");
         }
-        return result;
+        return result.toString();
     }
 
     public static String setCharsToAsterisks(String string) {
@@ -24,11 +24,13 @@ public final class DocumentProcessing {
     public static String getAllCharsSet1(String string) {
         Pattern pattern = Pattern.compile("[a-zA-Z]+");
         Matcher mat = pattern.matcher(string);
-        String result = "";
+        StringBuilder stringB = new StringBuilder();
+
         while (mat.find()) {
-            result += mat.group().toLowerCase() + "/";
+            stringB.append(mat.group().toLowerCase()).append("/");
         }
-        return result;
+        stringB.replace(stringB.length() - 1, stringB.length(), "");
+        return stringB.toString();
     }
 
     public static String getAllCharsSet2(String string) {
@@ -48,7 +50,7 @@ public final class DocumentProcessing {
         if (string.contains(seq.toLowerCase())) {
             System.out.println("The name " + string + " contains sequences: " + seq);
         } else {
-            System.out.println("The name " + string + " doesn't contains sequences: " + seq);
+            System.out.println("The name " + string + " doesn't contain sequences: " + seq);
         }
     }
 
@@ -57,7 +59,7 @@ public final class DocumentProcessing {
         if (string.startsWith(seq)) {
             System.out.println("The name " + string + " starts with a sequence: " + seq);
         } else {
-            System.out.println("The name: " + string + " doesn't starts with a sequence: " + seq);
+            System.out.println("The name: " + string + " doesn't start with a sequence: " + seq);
         }
 
     }
@@ -67,7 +69,7 @@ public final class DocumentProcessing {
         if (string.endsWith(seq)) {
             System.out.println("The name " + string + " ends with a sequence: " + seq);
         } else {
-            System.out.println("The name " + string + " doesn't ends with a sequence: " + seq);
+            System.out.println("The name " + string + " doesn't end with a sequence: " + seq);
         }
     }
 }
